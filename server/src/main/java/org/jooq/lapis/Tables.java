@@ -15,6 +15,7 @@ import org.jooq.lapis.tables.YMainSequenceColumnar;
 import org.jooq.lapis.tables.YMainSequenceColumnarStaging;
 import org.jooq.lapis.tables.YMainSequenceStaging;
 import org.jooq.lapis.tables.YNextstrainGenbank;
+import org.jooq.lapis.tables.YPangolinAssignment;
 import org.jooq.lapis.tables.YS3c;
 
 
@@ -78,6 +79,11 @@ public class Tables {
      * The table <code>y_nextstrain_genbank</code>.
      */
     public static final YNextstrainGenbank Y_NEXTSTRAIN_GENBANK = YNextstrainGenbank.Y_NEXTSTRAIN_GENBANK;
+
+    /**
+     * The table <code>y_pangolin_assignment</code>.
+     */
+    public static final YPangolinAssignment Y_PANGOLIN_ASSIGNMENT = YPangolinAssignment.Y_PANGOLIN_ASSIGNMENT;
 
     /**
      * The table <code>y_s3c</code>.

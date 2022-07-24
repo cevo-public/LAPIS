@@ -47,6 +47,21 @@ public class YNextstrainGenbank extends TableImpl<YNextstrainGenbankRecord> {
     }
 
     /**
+     * The column <code>y_nextstrain_genbank.metadata_hash</code>.
+     */
+    public final TableField<YNextstrainGenbankRecord, String> METADATA_HASH = createField(DSL.name("metadata_hash"), SQLDataType.CLOB, this, "");
+
+    /**
+     * The column <code>y_nextstrain_genbank.seq_original_hash</code>.
+     */
+    public final TableField<YNextstrainGenbankRecord, String> SEQ_ORIGINAL_HASH = createField(DSL.name("seq_original_hash"), SQLDataType.CLOB, this, "");
+
+    /**
+     * The column <code>y_nextstrain_genbank.seq_aligned_hash</code>.
+     */
+    public final TableField<YNextstrainGenbankRecord, String> SEQ_ALIGNED_HASH = createField(DSL.name("seq_aligned_hash"), SQLDataType.CLOB, this, "");
+
+    /**
      * The column <code>y_nextstrain_genbank.genbank_accession</code>.
      */
     public final TableField<YNextstrainGenbankRecord, String> GENBANK_ACCESSION = createField(DSL.name("genbank_accession"), SQLDataType.CLOB, this, "");
@@ -177,9 +192,19 @@ public class YNextstrainGenbank extends TableImpl<YNextstrainGenbankRecord> {
     public final TableField<YNextstrainGenbankRecord, byte[]> SEQ_ALIGNED_COMPRESSED = createField(DSL.name("seq_aligned_compressed"), SQLDataType.BLOB, this, "");
 
     /**
+     * The column <code>y_nextstrain_genbank.aa_seqs_compressed</code>.
+     */
+    public final TableField<YNextstrainGenbankRecord, byte[]> AA_SEQS_COMPRESSED = createField(DSL.name("aa_seqs_compressed"), SQLDataType.BLOB, this, "");
+
+    /**
      * The column <code>y_nextstrain_genbank.aa_mutations</code>.
      */
     public final TableField<YNextstrainGenbankRecord, String> AA_MUTATIONS = createField(DSL.name("aa_mutations"), SQLDataType.CLOB, this, "");
+
+    /**
+     * The column <code>y_nextstrain_genbank.aa_unknowns</code>.
+     */
+    public final TableField<YNextstrainGenbankRecord, String> AA_UNKNOWNS = createField(DSL.name("aa_unknowns"), SQLDataType.CLOB, this, "");
 
     /**
      * The column <code>y_nextstrain_genbank.nuc_substitutions</code>.
@@ -197,24 +222,24 @@ public class YNextstrainGenbank extends TableImpl<YNextstrainGenbankRecord> {
     public final TableField<YNextstrainGenbankRecord, String> NUC_INSERTIONS = createField(DSL.name("nuc_insertions"), SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>y_nextstrain_genbank.aa_seqs_compressed</code>.
+     * The column <code>y_nextstrain_genbank.nuc_unknowns</code>.
      */
-    public final TableField<YNextstrainGenbankRecord, byte[]> AA_SEQS_COMPRESSED = createField(DSL.name("aa_seqs_compressed"), SQLDataType.BLOB, this, "");
+    public final TableField<YNextstrainGenbankRecord, String> NUC_UNKNOWNS = createField(DSL.name("nuc_unknowns"), SQLDataType.CLOB, this, "");
 
     /**
-     * The column <code>y_nextstrain_genbank.metadata_hash</code>.
+     * The column <code>y_nextstrain_genbank.year</code>.
      */
-    public final TableField<YNextstrainGenbankRecord, String> METADATA_HASH = createField(DSL.name("metadata_hash"), SQLDataType.CLOB, this, "");
+    public final TableField<YNextstrainGenbankRecord, Integer> YEAR = createField(DSL.name("year"), SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>y_nextstrain_genbank.seq_original_hash</code>.
+     * The column <code>y_nextstrain_genbank.month</code>.
      */
-    public final TableField<YNextstrainGenbankRecord, String> SEQ_ORIGINAL_HASH = createField(DSL.name("seq_original_hash"), SQLDataType.CLOB, this, "");
+    public final TableField<YNextstrainGenbankRecord, Integer> MONTH = createField(DSL.name("month"), SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>y_nextstrain_genbank.seq_aligned_hash</code>.
+     * The column <code>y_nextstrain_genbank.day</code>.
      */
-    public final TableField<YNextstrainGenbankRecord, String> SEQ_ALIGNED_HASH = createField(DSL.name("seq_aligned_hash"), SQLDataType.CLOB, this, "");
+    public final TableField<YNextstrainGenbankRecord, Integer> DAY = createField(DSL.name("day"), SQLDataType.INTEGER, this, "");
 
     private YNextstrainGenbank(Name alias, Table<YNextstrainGenbankRecord> aliased) {
         this(alias, aliased, null);
